@@ -1,6 +1,10 @@
 import './App.css';
 import { useState } from 'react';
 
+
+export const replaceCamelWithSpaces = (colorName) => {
+  return colorName.replace(/\B([A-Z])\B/g, ' $1');
+}
 function App() {
   const [btnColor, setBtnColor] = useState("blue");
   const [isDisabled, setButtonStatus] = useState(false);
@@ -19,8 +23,6 @@ function App() {
       onClick={() => { setButtonStatus(!isDisabled) }}
        />
        <label htmlFor="disable-button-checkbox"> Disable Button</label>
-
-       <input type="checkbox" />
     </div>
   );
 }
