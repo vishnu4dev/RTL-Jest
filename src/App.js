@@ -6,11 +6,11 @@ export const replaceCamelWithSpaces = (colorName) => {
   return colorName.replace(/\B([A-Z])\B/g, ' $1');
 }
 function App() {
-  const [btnColor, setBtnColor] = useState("blue");
+  const [btnColor, setBtnColor] = useState("MidnightBlue");
   const [isDisabled, setButtonStatus] = useState(false);
-  const newButtonColor = btnColor === "blue" ? "red" : "blue";
+  const newButtonColor = btnColor === "MidnightBlue" ? "MediumVioletRed" : "MidnightBlue";
   const handleButtonClick = () => {
-    btnColor === "red" ? setBtnColor("blue") : setBtnColor("red")
+    btnColor === "MediumVioletRed" ? setBtnColor("MidnightBlue") : setBtnColor("MediumVioletRed")
   }
   return (
     <div className="app-main">
